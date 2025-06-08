@@ -6,12 +6,13 @@ public class ServerReadThread extends Thread {
 
     public ServerReadThread(Socket socket) {
         this.socket = socket;
-        this.run();
+        this.start();
     }
 
     @Override
     public void run() {
         try {
+            System.out.println(Thread.currentThread().getName());
                        BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             String inLine;
             OutputStream outStream = socket.getOutputStream();
