@@ -9,8 +9,6 @@ public class Client {
         InetAddress address = InetAddress.getLocalHost();
         Socket client = new Socket(address, 1300);
 
-//        System.out.println(client.getInetAddress());
-//        System.out.println(client.getLocalPort());
 
         InputStream inStream = client.getInputStream();
         OutputStream outStream = client.getOutputStream();
